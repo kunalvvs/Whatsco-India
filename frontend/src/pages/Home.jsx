@@ -42,7 +42,7 @@ function Home() {
         <div className="ad-label">ADS</div>
         <div className="ad-card">
           <img 
-            src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80" 
+            src="https://preview--baoa-friendly-hub.lovable.app/assets/hero-shoe-CyAl2QiJ.jpg" 
             alt="Premium Leather Collection"
             className="ad-image"
           />
@@ -66,7 +66,7 @@ function Home() {
 
       {/* Film Strip Section */}
       <div className="film-strip-section">
-        <h3>FILM STRIP..</h3>
+        
         <div className="film-strip-scroll">
           {images.map((img, index) => (
             <div 
@@ -80,7 +80,9 @@ function Home() {
         </div>
 
         {/* Main Display Image */}
+         <h3>FILM STRIP..</h3>
         <div className="main-display">
+           
           <img src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} />
         </div>
 

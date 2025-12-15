@@ -1,9 +1,10 @@
 .header {
-  background-color: #fef5f0;
+  background-color: #f7f7f7;
   padding: 16px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
+  border: 2px solid #dce0e5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -31,16 +32,20 @@
 .wallet-btn {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 6px;
-  background-color: #5b9cff;
+  background-color: #79adfb;
   color: white;
-  border: none;
-  padding: 10px 20px;
+  border: 3px solid rgb(219, 209, 237);
+   padding: 10px 20px; 
+  padding-left: 130px;
+  padding-right: 130px;
   border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: .875rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
+    margin-top: 5px;
 }
 
 .wallet-btn:hover {
@@ -58,11 +63,19 @@
   border: none;
   cursor: pointer;
   padding: 8px;
+  margin-left: 50%;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s;
+}
+
+.notification-btn1{
+    background-color: #ff8a66;
+    padding: 9px;
+    border: 1px solid #ff8a66;
+    border-radius: 8px;
 }
 
 .notification-btn:hover {
