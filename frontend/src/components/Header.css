@@ -123,4 +123,19 @@
 }
 }
 
+@media (min-width: 412px){
+  .wallet-btn{
+    
+ 
+  padding-left: 125px;
+  padding-right: 125px;
+  
+  }
+}
 
+@media(min-width:430px){
+  .wallet-btn{
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
