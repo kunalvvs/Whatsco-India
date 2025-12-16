@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiTrendingUp, FiVideo, FiPlay, FiMessageCircle, FiSend, FiChevronLeft, FiChevronRight, FiPlus } from 'react-icons/fi';
 import './Home.css';
-import {  reels } from '../data/dummyData';
+import { chatList,messages, reels } from '../data/dummyData';
+
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -70,9 +71,51 @@ function Home() {
         </div>
       </div>
 
+
+    {/* Chat Section */}
+      <section className="home-chat-section">
+        <div className="container">
+          {/* <div className="chat-section-header">
+            <h2 className="section-title">
+              <FiMessageCircle /> Chat with Friends
+            </h2>
+            <Link to="/chat" className="view-all-link">
+              View All <FiArrowRight />
+            </Link>
+          </div> */}
+          <div className="chat-profiles-grid">
+            {/* First Row - 4 profiles */}
+            <div className="chat-row">
+              {chatList.slice(0, 6).map(chat => (
+                <Link to="/chat" key={chat.id} className="chat-profile-item">
+                  <div className="chat-profile-avatar">
+                    <img src={chat.avatar} alt={chat.name} />
+                    {chat.online && <span className="profile-online-dot"></span>}
+                  </div>
+                  {/* <span className="chat-profile-name">{chat.name.split(' ')[0]}</span> */}
+                  {chat.unread > 0 && (
+                    <div className="profile-unread-badge">{chat.unread}</div>
+                  )}
+                </Link>
+              ))}
+
+              <Link to="/chat" className="chat-profile-item add-more">
+                <div className="chat-profile-avatar plus-avatar">
+                  <FiPlus size={32} />
+                </div>
+                <span className="chat-profile-name"></span>
+              </Link>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Film Strip Section */}
       <div className="film-strip-section">
-        
+{/*         
         <div className="film-strip-scroll">
           {images.map((img, index) => (
             <div 
@@ -83,10 +126,10 @@ function Home() {
               <img src={img.src} alt={img.alt} />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Main Display Image */}
-         <h3>FILM STRIP..</h3>
+         <h3 className='film'>FILM STRIP..</h3>
       
 
          {/* Reels Banner - Horizontal Scroll */}
