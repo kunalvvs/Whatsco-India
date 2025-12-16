@@ -1,5 +1,9 @@
+
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FiArrowRight, FiTrendingUp, FiVideo, FiPlay, FiMessageCircle, FiSend, FiChevronLeft, FiChevronRight, FiPlus } from 'react-icons/fi';
 import './Home.css';
+import {  reels } from '../data/dummyData';
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -81,14 +85,42 @@ function Home() {
 
         {/* Main Display Image */}
          <h3>FILM STRIP..</h3>
-        <div className="main-display">
-           
-          <img src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} />
-        </div>
+      
 
-        <button className="lets-go-btn" onClick={nextImage}>
-          Let's GO
-        </button>
+         {/* Reels Banner - Horizontal Scroll */}
+      <section className="reels-banner-youtube">
+        <div className="container">
+         
+          <div className="reels-horizontal-scroll">
+            {reels.map((reel, index) => (
+              <Link to="/reels" key={reel.id} className="youtube-reel-card-horizontal" style={{ animationDelay: `${index * 0.05}s` }}>
+                <div className="reel-video-wrapper">
+                  <video 
+                    src={reel.videoUrl} 
+                    className="reel-preview-video"
+                    loop 
+                    muted 
+                    playsInline
+                    autoPlay
+                  />
+                  <div className="reel-play-overlay">
+                    <FiPlay className="reel-play-icon" />
+                  </div>
+                  
+                </div>
+                <div id='reel-card-info' className="reel-card-info ">
+                  <h4>{reel.title}</h4>
+                  <span className="reel-views">{(reel.views / 1000).toFixed(1)}K views</span>
+                </div>
+                
+              </Link>
+            ))}
+            <Link to="/reels" className="view-all-reels">
+              Let's GO <FiArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
       </div>
     </div>
   );

@@ -109,13 +109,17 @@
   border: 3px solid rgb(219, 209, 237);
    padding: 10px 20px; 
   padding-left: 113px;
-  padding-right: 113px;
+  padding-right: 115px;
   border-radius: 8px;
   font-size: .875rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
     margin-top: 5px;
+}
+
+.notification-btn1{
+    /* margin-left: .5rem; */
 }
 }
 

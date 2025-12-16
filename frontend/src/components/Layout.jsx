@@ -6,9 +6,11 @@ import './Layout.css';
 function Layout({ children }) {
   const location = useLocation();
   
+    const hideHeader = location.pathname === "/reels";
+  
   return (
     <div className="layout">
-      <Header />
+     {!hideHeader && <Header />}
       <main className="main-content">
         {children}
       </main>
