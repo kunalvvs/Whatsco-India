@@ -1,12 +1,11 @@
 // Dummy data for the application
 
-
 export const reels = [
   {
     id: 1,
     videoUrl: "https://res.cloudinary.com/demo/video/upload/v1/samples/sea-turtle.mp4",
     thumbnail: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=300",
-    title: "Crafting Premium Wallets",
+    title: "Ocean Fantastic View",
     likes: 1234,
     comments: 89,
     views: 45600,
@@ -17,7 +16,7 @@ export const reels = [
     id: 2,
     videoUrl: "https://res.cloudinary.com/demo/video/upload/v1/samples/elephants.mp4",
     thumbnail: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=300",
-    title: "Behind the Scenes - Leather Bags",
+    title: "Wild Life into forest- Elephant",
     likes: 2341,
     comments: 156,
     views: 67800,
@@ -28,7 +27,7 @@ export const reels = [
     id: 3,
     videoUrl: "https://res.cloudinary.com/demo/video/upload/v1/samples/cld-sample-video.mp4",
     thumbnail: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300",
-    title: "Premium Leather Jackets Collection",
+    title: "Childrens danching with each other",
     likes: 3456,
     comments: 234,
     views: 89000,

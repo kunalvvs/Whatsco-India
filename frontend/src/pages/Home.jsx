@@ -39,6 +39,8 @@ function Home() {
     setCurrentImageIndex(index);
   };
 
+  
+
   return (
     <div className="home-page">
       {/* Premium Ad Section */}
@@ -108,7 +110,7 @@ function Home() {
                   </div>
                   
                 </div>
-                <div id='reel-card-info' className="reel-card-info ">
+                <div  className="reel-card-info ">
                   <h4>{reel.title}</h4>
                   <span className="reel-views">{(reel.views / 1000).toFixed(1)}K views</span>
                 </div>
