@@ -93,7 +93,7 @@ function Shopping() {
       {/* Header Section */}
       <div className="shopping-header">
         <h1>Whatsco India</h1>
-        <p className="subtitle">Premium Leather Craft</p>
+        <p className="subtitle">Premium Leather Craft More</p>
       </div>
 
       {/* Search Bar */}

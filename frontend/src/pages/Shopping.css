@@ -289,6 +289,13 @@
   }
 }
 
+@media (min-width: 375px)
+{
+  .products-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
 @media (min-width: 768px) {
   .shopping-page {
     padding: 30px;
