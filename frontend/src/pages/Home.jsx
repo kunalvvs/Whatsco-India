@@ -166,8 +166,8 @@ function Home() {
       <section className="reels-banner-youtube">
         <div className="container">
          
-          <div className="reels-horizontal-scroll">
-            {reels.map((reel, index) => (
+          <div className="reels-horizontal-scroll single-reel">
+            {reels.slice(0, 1).map((reel, index) => (
               <Link to="/reels" key={reel.id} className="youtube-reel-card-horizontal" style={{ animationDelay: `${index * 0.05}s` }}>
                 <div className="reel-video-wrapper">
                   <video 
@@ -181,13 +181,13 @@ function Home() {
                   <div className="reel-play-overlay">
                     <FiPlay className="reel-play-icon" />
                   </div>
-                  
                 </div>
+                {/* info removed on home single view
                 <div  className="reel-card-info ">
                   <h4>{reel.title}</h4>
                   <span className="reel-views">{(reel.views / 1000).toFixed(1)}K views</span>
                 </div>
-                
+                */}
               </Link>
             ))}
             <Link to="/reels" className="view-all-reels">

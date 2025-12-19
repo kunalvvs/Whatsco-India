@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Shopping from './pages/Shopping';
 import Promotion from './pages/Promotion';
 import Reels from './pages/Reels';
+import Account from './pages/Account';
 import './App.css';
 import Chat from './pages/Chat';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/promotion" element={<Promotion />} />
           <Route path='/reels' element={<Reels/>} />
           <Route path='/chat' element={<Chat/>} />
+          <Route path='/account' element={<Account/>} />
         </Routes>
       </Layout>
     </Router>

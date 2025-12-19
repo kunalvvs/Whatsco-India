@@ -1,0 +1,361 @@
+.account-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 90px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Profile Card */
+.profile-card {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  
+  
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f0f0f0;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.profile-email {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.profile-member-since {
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.edit-profile-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.edit-profile-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Opportunities Section */
+.opportunities-section {
+  margin-bottom: 24px;
+}
+
+.opportunities-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.opportunity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.opportunity-card:nth-child(1) .opportunity-icon {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.opportunity-card:nth-child(2) .opportunity-icon {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.opportunity-card h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.opportunity-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #5b9cff;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Menu Section */
+.menu-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background: #f9f9f9;
+}
+
+.menu-item-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f0f4ff;
+  color: #5b9cff;
+  font-size: 20px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.menu-item-content {
+  flex: 1;
+}
+
+.menu-item-content h4 {
+  margin: 0 0 2px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.menu-item-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.menu-item-arrow {
+  font-size: 20px;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background: white;
+  border: 2px solid #ff4444;
+  color: #ff4444;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: #fff5f5;
+}
+
+.logout-btn svg {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-page {
+    padding: 16px;
+  }
+
+  .profile-card {
+    padding: 24px 16px;
+  }
+
+  .opportunities-section h3 {
+    font-size: 16px;
+  }
+
+  .stats-section {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 16px 12px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+  .menu-item {
+    padding: 16px;
+  }
+
+  .menu-item-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    margin-right: 12px;
+  }
+
+  .menu-item-content h4 {
+    font-size: 14px;
+  }
+
+  .menu-item-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-page {
+    padding: 12px;
+    padding-bottom: 80px;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+   
+  }
+
+  .profile-info h2 {
+    font-size: 20px;
+  }
+
+  .opportunities-grid {
+    gap: 8px;
+  }
+
+  .opportunity-card {
+    padding: 16px 12px;
+  }
+
+  .opportunity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .opportunity-card h4 {
+    font-size: 13px;
+  }
+
+  .opportunity-card p {
+    font-size: 11px;
+  }
+
+  .stat-card {
+    padding: 14px 8px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .menu-item {
+    padding: 14px;
+  }
+
+  .logout-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
