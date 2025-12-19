@@ -102,6 +102,69 @@ export const chatList = [
     timestamp: "2 days ago",
     unread: 0,
     online: false
+  },
+   {
+    id: 8,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 9,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 10,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 11,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 12,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 13,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
+  },
+   {
+    id: 14,
+    name: "David Brown",
+    avatar: "https://images.unsplash.com/photo-1537824598505-99ee03483384?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    lastMessage: "When will you restock the bags?",
+    timestamp: "2 days ago",
+    unread: 0,
+    online: false
   }
 
 ];

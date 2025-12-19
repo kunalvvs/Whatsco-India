@@ -1,13 +1,18 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiTrendingUp, FiVideo, FiPlay, FiMessageCircle, FiSend, FiChevronLeft, FiChevronRight, FiPlus } from 'react-icons/fi';
+import { FiArrowRight, FiTrendingUp, FiVideo, FiPlay, FiMessageCircle, FiSend, FiChevronLeft, FiChevronRight, FiPlus, FiUserPlus } from 'react-icons/fi';
 import './Home.css';
-import { chatList,messages, reels } from '../data/dummyData';
+import { chatList, messages, reels } from '../data/dummyData';
+import ContactSelection from '../components/ContactSelection';
 
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showFAB, setShowFAB] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
   
   const images = [
     {
@@ -38,6 +43,26 @@ function Home() {
 
   const scrollToImage = (index) => {
     setCurrentImageIndex(index);
+  };
+
+  // Swipe gesture handlers
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 100) {
+      // Swipe left detected
+      setShowFAB(true);
+    }
+    if (touchEndX - touchStartX > 100) {
+      // Swipe right detected
+      setShowFAB(false);
+    }
   };
 
   
@@ -73,7 +98,12 @@ function Home() {
 
 
     {/* Chat Section */}
-      <section className="home-chat-section">
+      <section 
+        className="home-chat-section"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="container">
           {/* <div className="chat-section-header">
             <h2 className="section-title">
@@ -86,7 +116,7 @@ function Home() {
           <div className="chat-profiles-grid">
             {/* First Row - 4 profiles */}
             <div className="chat-row">
-              {chatList.slice(0, 6).map(chat => (
+              {chatList.slice(0, 13).map(chat => (
                 <Link to="/chat" key={chat.id} className="chat-profile-item">
                   <div className="chat-profile-avatar">
                     <img src={chat.avatar} alt={chat.name} />
@@ -99,12 +129,12 @@ function Home() {
                 </Link>
               ))}
 
-              <Link to="/chat" className="chat-profile-item add-more">
+              {/* <Link to="/chat" className="chat-profile-item add-more">
                 <div className="chat-profile-avatar plus-avatar">
                   <FiPlus size={32} />
                 </div>
                 <span className="chat-profile-name"></span>
-              </Link>
+              </Link> */}
             </div>
   
           </div>
@@ -166,6 +196,24 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Floating Action Button */}
+      {showFAB && (
+        <button 
+          className="chat-fab"
+          onClick={() => setShowContactModal(true)}
+          title="New Chat"
+        >
+          <FiUserPlus size={24} />
+        </button>
+      )}
+
+      {/* Contact Selection Modal */}
+      <ContactSelection 
+        isOpen={showContactModal}
+        onClose={() => setShowContactModal(false)}
+        contacts={chatList}
+      />
       </div>
     </div>
   );

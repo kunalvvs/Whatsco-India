@@ -59,11 +59,19 @@
   background: white;
   border-radius: 12px;
   padding: 14px 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(91, 156, 255, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(91, 156, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 6px 24px rgba(91, 156, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #5b9cff;
+  transform: translateY(-1px);
 }
 
 .search-bar svg {
-  color: #999;
+  color: #5b9cff;
   flex-shrink: 0;
 }
 
@@ -78,6 +86,47 @@
 
 .search-bar input::placeholder {
   color: #999;
+}
+
+/* Floating Action Button for Chat */
+.chat-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5b9cff, #5b9cff);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 16px rgba(51, 51, 207, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  animation: fabSlideIn 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.chat-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 168, 132, 0.5);
+}
+
+.chat-fab:active {
+  transform: scale(0.95);
+}
+
+@keyframes fabSlideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Film Strip Section */
@@ -250,16 +299,23 @@
 
 .view-all-reels {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: white;
   font-weight: 600;
-  padding: 12px 24px;
+  padding: 20px;
   border: 2px solid var(--white);
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.3s ease;
   background-color: #ff7e5f;
   text-decoration: none;
+  min-width: 150px;
+  min-height: 150px;
+  width: 150px;
+  height: 150px;
+  font-size: 1.1rem;
 }
 
 .view-all-reels:hover {
@@ -356,9 +412,10 @@
 
 .reel-video-wrapper {
   position: relative;
-  aspect-ratio: 9/12;
+  aspect-ratio: 16/9;
   background: #000;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .reel-preview-video {
@@ -640,7 +697,7 @@
   }
 
   .view-all-reels {
-    padding: 10px 20px;
+    padding: 10px 40px;
     font-size: 0.9rem;
   }
 }
