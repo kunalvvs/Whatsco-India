@@ -47,42 +47,47 @@ function Account() {
   ];
 
   const handleLogout = () => {
-    // Add logout logic here
-    console.log('Logging out...');
+    // Clear user session/token
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userData');
+    // Redirect to home page
+    window.location.href = '/';
   };
 
   return (
     <div className="account-page">
       {/* User Profile Card */}
       <div className="profile-card">
-        <div className="profile-avatar">
-          <img 
-            src="https://cdn.prod.website-files.com/63900c6064cbc128de0c6227/639b0f7b3749e7f1507c3326_team-img-01.jpg" 
-            alt="John Doe" 
-          />
+        <div className="profile-header">
+          <div className="profile-avatar">
+            <img 
+              src="https://cdn.prod.website-files.com/63900c6064cbc128de0c6227/639b0f7b3749e7f1507c3326_team-img-01.jpg" 
+              alt="John Doe" 
+            />
+          </div>
+          <div className="profile-info">
+            <h2>John Doe</h2>
+            <p className="profile-email">john.doe@example.com</p>
+            <p className="profile-member-since">Member since Jan 2024</p>
+          </div>
         </div>
-        <div className="profile-info">
-          <h2>John Doe</h2>
-          <p className="profile-email">john.doe@example.com</p>
-          <p className="profile-member-since">Member since Jan 2024</p>
-        </div>
-        <Link to="/profile/edit" className="edit-profile-btn">
+        <button className="edit-profile-btn" onClick={() => window.location.href = '/profile/edit'}>
           Edit Profile
-        </Link>
+        </button>
       </div>
 
       {/* Business Opportunities */}
       <div className="opportunities-section">
         <h3>Business Opportunities</h3>
         <div className="opportunities-grid">
-          <div className="opportunity-card">
+          <div className="opportunity-card" onClick={() => window.location.href = '/become-associate'}>
             <div className="opportunity-icon">
               <FiUsers />
             </div>
             <h4>Become an Associate</h4>
             <p>Join our partner network</p>
           </div>
-          <div className="opportunity-card">
+          <div className="opportunity-card" onClick={() => window.location.href = '/become-seller'}>
             <div className="opportunity-icon">
               <FiShoppingBag />
             </div>

@@ -1144,3 +1144,25 @@
     margin-left: 20%;
   }
 }
+
+@media(min-width: 375px)
+{
+  .youtube-reel-card-horizontal{
+    margin-left: 12%;
+  }
+}
+
+@media(min-width: 390px)
+{
+  .youtube-reel-card-horizontal{
+    margin-left: 6%;
+  }
+}
+
+@media(min-width: 430px)
+{
+  .youtube-reel-card-horizontal{
+    margin-left: 3%;
+  
+  }
+}
