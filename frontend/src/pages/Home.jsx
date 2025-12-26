@@ -55,11 +55,11 @@ function Home() {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 100) {
+    if (touchStartX - touchEndX > 10) {
       // Swipe left detected
       setShowFAB(true);
     }
-    if (touchEndX - touchStartX > 100) {
+    if (touchEndX - touchStartX > 10) {
       // Swipe right detected
       setShowFAB(false);
     }
