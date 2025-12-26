@@ -78,8 +78,45 @@
 }
 
 .edit-profile-btn:hover {
-  background: #667eea;
+  background: #79adfb;
   color: white;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quick-action-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-card svg {
+  font-size: 28px;
+  color: #79adfb;
+}
+
+.quick-action-card span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
 }
 
 /* Opportunities Section */
@@ -108,6 +145,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.2s;
   cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .opportunity-card:hover {
@@ -157,7 +197,7 @@
   margin-bottom: 24px;
 }
 
-.stat-card {
+.account-stat-card {
   background: white;
   border-radius: 12px;
   padding: 20px;
@@ -165,14 +205,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.stat-value {
+.account-stat-value {
   font-size: 32px;
   font-weight: 700;
   color: #5b9cff;
   margin-bottom: 4px;
 }
 
-.stat-label {
+.account-stat-label {
   font-size: 13px;
   color: #666;
 }
@@ -271,6 +311,7 @@
 @media (max-width: 768px) {
   .account-page {
     padding: 16px;
+    
   }
 
   .profile-card {
@@ -285,11 +326,11 @@
     gap: 8px;
   }
 
-  .stat-card {
+  .account-stat-card {
     padding: 16px 12px;
   }
 
-  .stat-value {
+  .account-stat-value {
     font-size: 28px;
   }
 
@@ -351,15 +392,15 @@
     font-size: 11px;
   }
 
-  .stat-card {
+  .account-stat-card {
     padding: 14px 8px;
   }
 
-  .stat-value {
+  .account-stat-value {
     font-size: 24px;
   }
 
-  .stat-label {
+  .account-stat-label {
     font-size: 12px;
   }
 

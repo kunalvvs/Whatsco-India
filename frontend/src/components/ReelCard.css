@@ -75,9 +75,10 @@
   align-items: center;
   margin-top: -150px;
   color: white;
+  
 }
 
-.action-btn {
+.action-btn-reels {
   background: none;
   border: none;
   color: var(--white);
@@ -90,16 +91,16 @@
   font-size: 1.5rem;
 }
 
-.action-btn span {
+.action-btn-reels span {
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.action-btn:hover {
+.action-btn-reels:hover {
   transform: scale(1.1);
 }
 
-.action-btn.liked {
+.action-btn-reels.liked {
   color: #EF4444;
 }
 
@@ -119,12 +120,12 @@
     max-width: 60%;
   }
 
-  .action-btn {
+  .action-btn-reels {
     font-size: 1.3rem;
     gap: 4px;
   }
 
-  .action-btn span {
+  .action-btn-reels span {
     font-size: 0.75rem;
   }
 }
@@ -152,12 +153,12 @@
     max-width: 60%;
   }
 
-  .action-btn {
+  .action-btn-reels {
     font-size: 1.3rem;
     gap: 4px;
   }
 
-  .action-btn span {
+  .action-btn-reels span {
     font-size: 0.75rem;
   }
 }

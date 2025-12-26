@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   FiUser, 
   FiCreditCard, 
@@ -13,6 +13,7 @@ import {
 import './Account.css';
 
 function Account() {
+  const navigate = useNavigate();
   const menuItems = [
     {
       icon: <FiUser />,
@@ -50,8 +51,8 @@ function Account() {
     // Clear user session/token
     localStorage.removeItem('userToken');
     localStorage.removeItem('userData');
-    // Redirect to home page
-    window.location.href = '/';
+    // Redirect to login page
+    navigate('/login');
   };
 
   return (
@@ -76,40 +77,52 @@ function Account() {
         </button>
       </div>
 
+      {/* Quick Actions */}
+      <div className="quick-actions">
+        <Link to="/wallet" className="quick-action-card">
+          <FiCreditCard />
+          <span>My Wallet</span>
+        </Link>
+        <Link to="/cart" className="quick-action-card">
+          <FiShoppingBag />
+          <span>My Cart</span>
+        </Link>
+      </div>
+
       {/* Business Opportunities */}
       <div className="opportunities-section">
         <h3>Business Opportunities</h3>
         <div className="opportunities-grid">
-          <div className="opportunity-card" onClick={() => window.location.href = '/become-associate'}>
+          <Link to="/become-associate" className="opportunity-card">
             <div className="opportunity-icon">
               <FiUsers />
             </div>
             <h4>Become an Associate</h4>
             <p>Join our partner network</p>
-          </div>
-          <div className="opportunity-card" onClick={() => window.location.href = '/become-seller'}>
+          </Link>
+          <Link to="/become-seller" className="opportunity-card">
             <div className="opportunity-icon">
               <FiShoppingBag />
             </div>
             <h4>Become a Seller</h4>
             <p>Start selling your products</p>
-          </div>
+          </Link>
         </div>
       </div>
 
       {/* Stats Cards */}
       <div className="stats-section">
-        <div className="stat-card">
-          <div className="stat-value">12</div>
-          <div className="stat-label">Orders</div>
+        <div className="account-stat-card">
+          <div className="account-stat-value">12</div>
+          <div className="account-stat-label">Orders</div>
         </div>
-        <div className="stat-card">
-          <div className="stat-value">5</div>
-          <div className="stat-label">Wishlist</div>
+        <div className="account-stat-card">
+          <div className="account-stat-value">5</div>
+          <div className="account-stat-label">Wishlist</div>
         </div>
-        <div className="stat-card">
-          <div className="stat-value">₹250</div>
-          <div className="stat-label">Credits</div>
+        <div className="account-stat-card">
+          <div className="account-stat-value">8</div>
+          <div className="account-stat-label">Reviews</div>
         </div>
       </div>
 

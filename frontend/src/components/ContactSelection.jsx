@@ -39,7 +39,7 @@ function ContactSelection({ isOpen, onClose, contacts = [] }) {
         </div>
 
         {/* Quick Actions */}
-        <div className="quick-actions">
+        <div className="quick-actions-contact">
           {quickActions.map(action => (
             <div key={action.id} className="action-item">
               <div className="action-icon" style={{ backgroundColor: action.color }}>
@@ -52,7 +52,7 @@ function ContactSelection({ isOpen, onClose, contacts = [] }) {
 
         {/* Contacts Section */}
         <div className="contacts-section-header">
-          <h3>Contacts on WhatsApp</h3>
+          <h3>Contacts on Whatsco</h3>
         </div>
 
         {/* Contacts List */}

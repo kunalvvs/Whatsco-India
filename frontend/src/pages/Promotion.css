@@ -30,7 +30,7 @@
   margin-bottom: 30px;
 }
 
-.stat-card {
+.promo-stat-card {
   background: white;
   border-radius: 16px;
   padding: 20px 16px;
@@ -39,24 +39,24 @@
   transition: all 0.3s;
 }
 
-.stat-card:hover {
+.promo-stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.stat-icon {
+.promo-stat-icon {
   font-size: 28px;
   margin-bottom: 12px;
 }
 
-.stat-value {
+.promo-stat-value {
   font-size: 24px;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 4px;
 }
 
-.stat-label {
+.promo-stat-label {
   font-size: 12px;
   color: #666;
   font-weight: 500;
@@ -271,15 +271,15 @@
     gap: 12px;
   }
   
-  .stat-card {
+  .promo-stat-card {
     padding: 16px 12px;
   }
   
-  .stat-icon {
+  .promo-stat-icon {
     font-size: 24px;
   }
   
-  .stat-value {
+  .promo-stat-value {
     font-size: 20px;
   }
   

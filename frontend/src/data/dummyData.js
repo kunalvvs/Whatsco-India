@@ -1,5 +1,137 @@
 // Dummy data for the application
 
+export const products = [
+  {
+    id: 1,
+    name: "Classic Leather Wallet",
+    price: 2499,
+    category: "wallets",
+    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+    description: "Premium genuine leather wallet with multiple card slots and coin pocket. Handcrafted with attention to detail.",
+    rating: 4.5,
+    reviews: 128,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500"
+    ]
+  },
+  {
+    id: 2,
+    name: "Executive Leather Bag",
+    price: 8999,
+    category: "bags",
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500",
+    description: "Spacious laptop bag made from premium leather. Perfect for professionals and travelers.",
+    rating: 4.8,
+    reviews: 256,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500"
+    ]
+  },
+  {
+    id: 3,
+    name: "Leather Belt - Premium",
+    price: 1499,
+    category: "accessories",
+    image: "https://plus.unsplash.com/premium_photo-1726769202190-ad2a3f2f360b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Elegant leather belt with classic buckle. Suitable for formal and casual wear.",
+    rating: 4.3,
+    reviews: 89,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1624222247344-550fb60583e2?w=500",
+      "https://images.unsplash.com/photo-1624222247344-550fb60583e2?w=500",
+      "https://images.unsplash.com/photo-1624222247344-550fb60583e2?w=500"
+    ]
+  },
+  {
+    id: 4,
+    name: "Vintage Leather Jacket",
+    price: 15999,
+    category: "jackets",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+    description: "Stylish vintage leather jacket with quilted lining. Perfect for all seasons.",
+    rating: 4.9,
+    reviews: 342,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500"
+    ]
+  },
+  {
+    id: 5,
+    name: "Travel Duffel Bag",
+    price: 6799,
+    category: "bags",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+    description: "Spacious leather duffel bag for weekend getaways. Durable and stylish.",
+    rating: 4.6,
+    reviews: 167,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500"
+    ]
+  },
+  {
+    id: 6,
+    name: "Leather Card Holder",
+    price: 899,
+    category: "wallets",
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500",
+    description: "Minimalist card holder with RFID protection. Slim and elegant design.",
+    rating: 4.4,
+    reviews: 93,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+    ]
+  },
+  {
+    id: 7,
+    name: "Messenger Bag",
+    price: 5499,
+    category: "bags",
+    image: "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500",
+    description: "Classic messenger bag with adjustable strap. Perfect for daily commute.",
+    rating: 4.7,
+    reviews: 201,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500",
+      "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500",
+      "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500"
+    ]
+  },
+  {
+    id: 8,
+    name: "Leather Watch Strap",
+    price: 799,
+    category: "accessories",
+    image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=500",
+    description: "Premium leather watch strap compatible with most watches. Available in multiple colors.",
+    rating: 4.2,
+    reviews: 76,
+    inStock: true,
+    images: [
+      "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=500",
+      "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=500",
+      "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=500"
+    ]
+  }
+];
+
+
 export const reels = [
   {
     id: 1,

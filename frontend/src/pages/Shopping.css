@@ -71,6 +71,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .cart-btn:hover {
@@ -278,7 +279,13 @@
   background: #c56829;
   transform: translateY(-1px);
 }
+.add-to-cart-btn.added {
+  background: #10b981;
+}
 
+.add-to-cart-btn.added:hover {
+  background: #059669;
+}
 .add-to-cart-btn:active {
   transform: translateY(0);
 }

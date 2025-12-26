@@ -44,21 +44,21 @@ const ReelCard = ({ reel, isActive }) => {
         </div>
 
         <div className="reel-actions">
-          <button className={`action-btn ${isLiked ? 'liked' : ''}`} onClick={handleLike}>
+          <button className={`action-btn-reels ${isLiked ? 'liked' : ''}`} onClick={handleLike}>
             <FiHeart fill={isLiked ? '#EF4444' : 'none'} />
             <span>{likesCount.toLocaleString()}</span>
           </button>
           
-          <button className="action-btn">
+          <button className="action-btn-reels">
             <FiMessageCircle />
             <span>{reel.comments}</span>
           </button>
           
-          <button className="action-btn">
+          <button className="action-btn-reels">
             <FiShare2 />
           </button>
           
-          <button className="action-btn">
+          <button className="action-btn-reels">
             <FiMoreVertical />
           </button>
         </div>

@@ -72,10 +72,10 @@ function Promotion() {
       {/* Stats Cards */}
       <div className="stats-container">
         {stats.map((stat, index) => (
-          <div key={index} className="stat-card">
-            <div className="stat-icon">{stat.icon}</div>
-            <div className="stat-value">{stat.value}</div>
-            <div className="stat-label">{stat.label}</div>
+          <div key={index} className="promo-stat-card">
+            <div className="promo-stat-icon">{stat.icon}</div>
+            <div className="promo-stat-value">{stat.value}</div>
+            <div className="promo-stat-label">{stat.label}</div>
           </div>
         ))}
       </div>
