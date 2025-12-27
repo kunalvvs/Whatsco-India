@@ -18,7 +18,8 @@ import VoiceCall from './pages/VoiceCall';
 import ProductDetail from './pages/ProductDetail';
 import BecomeSeller from './pages/BecomeSeller';
 import BecomeAssociate from './pages/BecomeAssociate';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import './App.css';
 
 function App() {
@@ -26,7 +27,11 @@ function App() {
     <CartProvider>
       <Router>
         <Routes>
-          {/* All Routes - With Layout */}
+          {/* Admin Routes - Without Layout */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+          {/* User Routes - With Layout */}
           <Route element={<Layout />}>
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
@@ -46,7 +51,6 @@ function App() {
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/become-seller" element={<BecomeSeller />} />
             <Route path="/become-associate" element={<BecomeAssociate />} />
-            <Route path="/admin" element={<AdminDashboard />} />
           </Route>
         </Routes>
       </Router>

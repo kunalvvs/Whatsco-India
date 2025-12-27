@@ -6,81 +6,14 @@ import { products } from '../data/dummyData';
 
 function Shopping() {
   const navigate = useNavigate();
-  const { addToCart } = useCart();
+  const { addToCart, cart } = useCart();
   const [activeCategory, setActiveCategory] = useState('All');
   const [favorites, setFavorites] = useState([]);
   const [addedToCart, setAddedToCart] = useState(null);
 
   const categories = ['All', 'Wallets', 'Belts', 'Bags', 'Accessories', 'Shoes'];
 
-  // const products = [
-  //   {
-  //     id: 1,
-  //     name: 'Classic Leather Wallet',
-  //     price: 1499,
-  //     originalPrice: 2499,
-  //     rating: 4.8,
-  //     reviews: 124,
-  //     image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80',
-  //     category: 'Wallets',
-  //     isNew: true
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Premium Leather Belt',
-  //     price: 899,
-  //     originalPrice: 1499,
-  //     rating: 4.6,
-  //     reviews: 89,
-  //     image: 'https://plus.unsplash.com/premium_photo-1726769202190-ad2a3f2f360b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  //     category: 'Belts',
-  //     isNew: false
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Handcrafted Leather Boots',
-  //     price: 6999,
-  //     originalPrice: 9999,
-  //     rating: 4.9,
-  //     reviews: 287,
-  //     image: 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&q=80',
-  //     category: 'Shoes',
-  //     isNew: false
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'Leather Derby Shoes',
-  //     price: 4499,
-  //     originalPrice: 6999,
-  //     rating: 4.6,
-  //     reviews: 134,
-  //     image: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&q=80',
-  //     category: 'Shoes',
-  //     isNew: false
-  //   },
-  //   {
-  //     id: 5,
-  //     name: 'Formal Leather Monk Straps',
-  //     price: 5499,
-  //     originalPrice: 8499,
-  //     rating: 4.8,
-  //     reviews: 98,
-  //     image: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80',
-  //     category: 'Shoes',
-  //     isNew: true
-  //   },
-  //   {
-  //     id: 6,
-  //     name: 'Casual Leather Sneakers',
-  //     price: 3999,
-  //     originalPrice: 5999,
-  //     rating: 4.7,
-  //     reviews: 245,
-  //     image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80',
-  //     category: 'Shoes',
-  //     isNew: false
-  //   }
-  // ];
+  
 
   const toggleFavorite = (productId) => {
     setFavorites(prev => 
@@ -124,6 +57,7 @@ function Shopping() {
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
+          {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
         </Link>
       </div>
 

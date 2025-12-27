@@ -117,9 +117,11 @@ function BecomeAssociate() {
       </div>
 
       {/* Stats Section */}
+      
       <div className="stats-section">
-        <h3>Your Performance</h3> <br />
+       
         <div className="stats-grid">
+          
           <div className="stat-card">
             <FiUsers className="stat-icon" />
             <div className="stat-details">

@@ -579,9 +579,10 @@
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    
+    grid-template-columns: repeat(2, 1fr);
   }
-
   .code-box {
     flex-direction: column;
     text-align: center;
