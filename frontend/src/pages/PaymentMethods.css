@@ -1,0 +1,240 @@
+.payment-methods-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 80px;
+}
+
+.payment-header {
+  background: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  /* z-index: 100; */
+}
+
+.payment-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.payment-content {
+  padding: 20px;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.payment-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.payment-card.default {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-type svg {
+  font-size: 24px;
+}
+
+.default-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-number {
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-expiry {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.set-default-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.set-default-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.delete-card-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-card-btn:hover {
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.add-card-btn {
+  width: 100%;
+  padding: 16px;
+  background: white;
+  border: 2px dashed #79adfb;
+  border-radius: 12px;
+  color: #79adfb;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-card-btn:hover {
+  background: #f8fbff;
+  border-color: #5b9cff;
+}
+
+.add-card-form {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.add-card-form h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #79adfb;
+  background: #f8fbff;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancel-btn,
+.submit-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn {
+  background: #f5f7fa;
+  border: none;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background: #e5e7ea;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #79adfb 0%, #5b9cff 100%);
+  border: none;
+  color: white;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(121, 173, 251, 0.3);
+}

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiArrowRight, FiTrendingUp, FiVideo, FiPlay, FiMessageCircle, FiSend, FiChevronLeft, FiChevronRight, FiPlus, FiUserPlus } from 'react-icons/fi';
 import './Home.css';
 import { chatList, messages, reels } from '../data/dummyData';
@@ -8,6 +8,7 @@ import ContactSelection from '../components/ContactSelection';
 
 
 function Home() {
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showContactModal, setShowContactModal] = useState(false);
   const [showFAB, setShowFAB] = useState(false);
@@ -201,7 +202,7 @@ function Home() {
       {showFAB && (
         <button 
           className="chat-fab"
-          onClick={() => setShowContactModal(true)}
+          onClick={() => navigate('/contact-selection')}
           title="New Chat"
         >
           <FiUserPlus size={24} />

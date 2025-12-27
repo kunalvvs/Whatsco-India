@@ -12,12 +12,17 @@ import Checkout from './pages/Checkout';
 import Wallet from './pages/Wallet';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import ChatMessages from './pages/ChatMessages';
 import VideoCall from './pages/VideoCall';
 import VoiceCall from './pages/VoiceCall';
 import ProductDetail from './pages/ProductDetail';
 import BecomeSeller from './pages/BecomeSeller';
 import BecomeAssociate from './pages/BecomeAssociate';
+import ContactSelectionPage from './pages/ContactSelectionPage';
+import EditProfile from './pages/EditProfile';
+import PaymentMethods from './pages/PaymentMethods';
+import Notifications from './pages/Notifications';
+import Settings from './pages/Settings';
+import HelpSupport from './pages/HelpSupport';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import './App.css';
@@ -44,10 +49,15 @@ function App() {
             <Route path="/promotion" element={<Promotion />} />
             <Route path="/reels" element={<Reels />} />
             <Route path="/chat" element={<Chat />} />
-            <Route path="/chat/:chatId" element={<ChatMessages />} />
+            <Route path="/contact-selection" element={<ContactSelectionPage />} />
             <Route path="/video-call/:contactId" element={<VideoCall />} />
             <Route path="/voice-call/:contactId" element={<VoiceCall />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/profile/edit" element={<EditProfile />} />
+            <Route path="/payment-methods" element={<PaymentMethods />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/become-seller" element={<BecomeSeller />} />
             <Route path="/become-associate" element={<BecomeAssociate />} />

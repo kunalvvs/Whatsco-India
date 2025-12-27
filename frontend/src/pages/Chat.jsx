@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiSend, FiPaperclip, FiPhone, FiVideo, FiMoreVertical, FiSearch } from 'react-icons/fi';
 import ChatBubble from '../components/ChatBubble';
 import { chatList, messages } from '../data/dummyData';
 import './Chat.css';
 
-
 const Chat = () => {
+  const navigate = useNavigate();
   const [selectedChat, setSelectedChat] = useState(chatList[0]);
   const [messageInput, setMessageInput] = useState('');
   const [chatMessages, setChatMessages] = useState(messages);
@@ -97,13 +98,21 @@ const Chat = () => {
               </div>
             </div>
             <div className="chat-actions">
-              <button className="action-icon-btn">
+              <button 
+                className="action-icon-btn"
+                onClick={() => navigate(`/voice-call/${selectedChat.id}`)}
+                title="Voice Call"
+              >
                 <FiPhone />
               </button>
-              <button className="action-icon-btn">
+              <button 
+                className="action-icon-btn"
+                onClick={() => navigate(`/video-call/${selectedChat.id}`)}
+                title="Video Call"
+              >
                 <FiVideo />
               </button>
-              <button className="action-icon-btn">
+              <button className="action-icon-btn" title="More Options">
                 <FiMoreVertical />
               </button>
             </div>
@@ -128,7 +137,7 @@ const Chat = () => {
               value={messageInput}
               onChange={(e) => setMessageInput(e.target.value)}
             />
-            <button type="submit" className="send-btn" disabled={!messageInput.trim()}>
+            <button type="submit" className="send-btn1" disabled={!messageInput.trim()}>
               <FiSend />
             </button>
           </form>
