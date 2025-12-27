@@ -64,8 +64,8 @@
   margin-bottom: 30px;
 }
 
-.action-btn {
-  background: white;
+.action-btn-wallet {
+  background: #79adfb;
   border: none;
   border-radius: 16px;
   padding: 20px;
@@ -76,22 +76,23 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
 }
 
-.action-btn:hover {
+.action-btn-wallet:hover {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
   transform: translateY(-2px);
 }
 
-.action-btn svg {
+.action-btn-wallet svg {
   font-size: 24px;
-  color: #79adfb;
+  color: #fafafa;
 }
 
-.action-btn span {
+.action-btn-wallet span {
   font-size: 14px;
   font-weight: 500;
-  color: #333;
+  color: #fff;
 }
 
 /* Transaction Section */

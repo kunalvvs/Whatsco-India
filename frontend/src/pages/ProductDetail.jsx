@@ -53,8 +53,14 @@ function ProductDetail() {
   };
 
   const handleBuyNow = () => {
-    addToCart(product);
-    navigate('/checkout');
+    navigate('/checkout', { 
+      state: { 
+        buyNowProduct: {
+          ...product,
+          quantity: 1
+        }
+      } 
+    });
   };
 
   // Touch swipe handlers for image gallery
@@ -252,21 +258,19 @@ function ProductDetail() {
             <strong>7 Days</strong>
             <span>Easy Return</span>
           </div>
-        </div>
-        <div className="service-item">
           <div className="service-icon">💵</div>
           <div className="service-text">
             <strong>Cash on</strong>
             <span>Delivery</span>
           </div>
-        </div>
-        <div className="service-item">
+
           <div className="service-icon">🏷️</div>
           <div className="service-text">
             <strong>Lowest</strong>
             <span>Price</span>
           </div>
         </div>
+       
       </div>
 
       {/* Size Selection */}

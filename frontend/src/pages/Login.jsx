@@ -57,7 +57,7 @@ function Login() {
       console.log('Login data:', formData);
       // Simulate successful login
       localStorage.setItem('userToken', 'demo-token');
-      navigate('/');
+      navigate('/home');
     }
   };
 

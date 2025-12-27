@@ -10,3 +10,11 @@
   padding-bottom: 70px;
   overflow-y: auto;
 }
+
+.main-content.auth-content {
+  padding-bottom: 0;
+  min-height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}

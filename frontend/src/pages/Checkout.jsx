@@ -1,12 +1,17 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { FiCreditCard, FiDollarSign, FiTruck, FiCheck } from 'react-icons/fi';
 import './Checkout.css';
 
 function Checkout() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { cart, getCartTotal, clearCart, wallet, addWalletTransaction, updateWalletBalance } = useCart();
+  
+  // Check if this is a single product purchase (Buy Now)
+  const buyNowProduct = location.state?.buyNowProduct;
+  const checkoutItems = buyNowProduct ? [buyNowProduct] : cart;
   
   const [formData, setFormData] = useState({
     fullName: '',
@@ -27,7 +32,9 @@ function Checkout() {
 
   const [orderPlaced, setOrderPlaced] = useState(false);
 
-  const subtotal = getCartTotal();
+  const subtotal = buyNowProduct 
+    ? buyNowProduct.price * buyNowProduct.quantity
+    : getCartTotal();
   const tax = subtotal * 0.18;
   const shipping = subtotal >= 499 ? 0 : 50;
   const total = subtotal + tax + shipping;
@@ -73,15 +80,18 @@ function Checkout() {
 
     // Simulate order placement
     setTimeout(() => {
-      clearCart();
+      // Only clear cart if this is a cart checkout, not Buy Now
+      if (!buyNowProduct) {
+        clearCart();
+      }
       setOrderPlaced(true);
       setTimeout(() => {
-        navigate('/');
+        navigate('/home');
       }, 3000);
     }, 1000);
   };
 
-  if (cart.length === 0 && !orderPlaced) {
+  if (checkoutItems.length === 0 && !orderPlaced) {
     navigate('/cart');
     return null;
   }
@@ -204,8 +214,8 @@ function Checkout() {
                 checked={paymentMethod === 'card'}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <FiCreditCard />
-              <span>Credit/Debit Card</span>
+              <FiCreditCard /> <span>Credit/Debit Card</span>
+              
             </label>
 
             <label className={`payment-option ${paymentMethod === 'wallet' ? 'active' : ''}`}>
@@ -304,7 +314,7 @@ function Checkout() {
           <h2>Order Summary</h2>
           
           <div className="summary-items">
-            {cart.map(item => (
+            {checkoutItems.map(item => (
               <div key={item.id} className="summary-item">
                 <span>{item.name} x {item.quantity}</span>
                 <span>₹{(item.price * item.quantity).toFixed(2)}</span>

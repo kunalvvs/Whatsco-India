@@ -121,6 +121,7 @@
   font-size: 18px;
   pointer-events: none;
   z-index: 1;
+ 
 }
 
 .country-code {
@@ -141,6 +142,13 @@
   font-size: 15px;
   color: #1a1a1a;
   transition: all 0.2s;
+}
+
+
+
+.input-wrapper input[name]
+{
+  padding-left: 50px;
 }
 
 .input-wrapper input[name="phone"] {

@@ -70,7 +70,7 @@ function Signup() {
       console.log('Signup data:', formData);
       // Simulate successful signup
       localStorage.setItem('userToken', 'demo-token');
-      navigate('/');
+      navigate('/home');
     }
   };
 

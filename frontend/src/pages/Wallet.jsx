@@ -63,15 +63,15 @@ function Wallet() {
 
       {/* Quick Actions */}
       <div className="quick-actions">
-        <button className="action-btn">
+        <button className="action-btn-wallet">
           <FiArrowUpRight />
           <span>Send</span>
         </button>
-        <button className="action-btn">
+        <button className="action-btn-wallet">
           <FiArrowDownLeft />
           <span>Request</span>
         </button>
-        <button className="action-btn">
+        <button className="action-btn-wallet">
           <FiDownload />
           <span>Withdraw</span>
         </button>

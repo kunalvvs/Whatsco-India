@@ -8,14 +8,15 @@ function Layout() {
   
   const hideHeader = location.pathname === "/reels";
   const hideHeaderChats = location.pathname === "/chat";
+  const isAuthPage = location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/";
   
   return (
     <div className="layout">
-      {!hideHeader && !hideHeaderChats && <Header />}
-      <main className="main-content">
+      {!hideHeader && !hideHeaderChats && !isAuthPage && <Header />}
+      <main className={`main-content ${isAuthPage ? 'auth-content' : ''}`}>
         <Outlet />
       </main>
-      <BottomNav />
+      {!isAuthPage && <BottomNav />}
     </div>
   );
 }

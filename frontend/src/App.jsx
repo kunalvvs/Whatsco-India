@@ -28,9 +28,10 @@ function App() {
         <Routes>
           {/* All Routes - With Layout */}
           <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path='/home' element={<Home/>} />
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
