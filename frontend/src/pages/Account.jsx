@@ -93,7 +93,7 @@ function Account() {
       <div className="opportunities-section">
         <h3>Business Opportunities</h3>
         <div className="opportunities-grid">
-          <Link to="/become-associate" className="opportunity-card">
+          <Link to="/associate" className="opportunity-card">
             <div className="opportunity-icon">
               <FiUsers />
             </div>

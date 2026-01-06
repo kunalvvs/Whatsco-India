@@ -216,22 +216,7 @@
 .stats-section h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #333;
-  margin: 0 0 15px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.stat-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
+  calign-items: center;
   gap: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -275,7 +260,24 @@
 }
 
 .stat-card.highlight .stat-details p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) 0 4px 0;
+}
+
+.stat-card.highlight .stat-details h4 {
+  color: white;
+  font-size: 32px;
+}
+
+.stat-details p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.stat-card.highlight .stat-details p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
 }
 
 /* Earnings Section */

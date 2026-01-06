@@ -16,7 +16,7 @@ import VideoCall from './pages/VideoCall';
 import VoiceCall from './pages/VoiceCall';
 import ProductDetail from './pages/ProductDetail';
 import BecomeSeller from './pages/BecomeSeller';
-import BecomeAssociate from './pages/BecomeAssociate';
+// import BecomeAssociate from './pages/BecomeAssociate';
 import ContactSelectionPage from './pages/ContactSelectionPage';
 import EditProfile from './pages/EditProfile';
 import PaymentMethods from './pages/PaymentMethods';
@@ -25,6 +25,10 @@ import Settings from './pages/Settings';
 import HelpSupport from './pages/HelpSupport';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import AssociateHome from './pages/associate/AssociateHome';
+import AssociateWallet from './pages/associate/AssociateWallet';
+import DailyTasks from './pages/associate/DailyTasks';
+import TransactionHistory from './pages/associate/TransactionHistory';
 import './App.css';
 
 function App() {
@@ -35,6 +39,13 @@ function App() {
           {/* Admin Routes - Without Layout */}
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+          {/* Associate Routes - Without Layout */}
+          <Route path="/associate" element={<AssociateHome />} />
+          <Route path="/associate/home" element={<AssociateHome />} />
+          <Route path="/associate/wallet" element={<AssociateWallet />} />
+          <Route path="/associate/tasks" element={<DailyTasks />} />
+          <Route path="/associate/transactions" element={<TransactionHistory />} />
 
           {/* User Routes - With Layout */}
           <Route element={<Layout />}>
@@ -60,7 +71,7 @@ function App() {
             <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/become-seller" element={<BecomeSeller />} />
-            <Route path="/become-associate" element={<BecomeAssociate />} />
+            {/* <Route path="/become-associate" element={<BecomeAssociate />} /> */}
           </Route>
         </Routes>
       </Router>
